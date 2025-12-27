@@ -1,0 +1,117 @@
+[index.html](https://github.com/user-attachments/files/24355815/index.html)
+[login.html](https://github.com/user-attachments/files/24355816/login.html)[script.js](https://github.com/user-attachments/files/24355822/script.js)
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("loginForm");
+    if(form){
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if(username === "admin" && password === "12345"){
+                alert("ورود موفق!");
+                window.location.href = "index.html";
+            } else {
+                document.getElementById("error").innerText = "نام کاربری یا رمز عبور اشتباه است!";
+            }
+        });
+    }
+});
+[notes.json](https://github.com/user-attachments/files/24355825/notes.json)
+[styie.css](https://github.com/user-attachments/files/24355827/styie.css)
+body {
+    font-family: "Vazir", Tahoma, sans-serif;
+    line-height: 1.7;
+    background-color: #f0f2f5;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 40px 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+nav { margin-top: 15px; }
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+.menu li a:hover { background-color: #3b82f6; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table td { border: 1px solid #ccc; padding: 10px; }
+
+article {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+article h3 { color: #1e3a8a; margin-bottom: 10px; }
+article h4 { color: #3b82f6; margin-top: 20px; margin-bottom: 8px; }
+article p { line-height: 1.8; color: #333; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    margin-top: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.login-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.login-container button:hover { background-color: #3b82f6; }
